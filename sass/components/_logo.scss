@@ -1,4 +1,8 @@
 .logo {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
   width: 100px;
   height: 20px;
 
@@ -19,6 +23,7 @@
 .logo__icon {
   width: 14px;
   height: 15px;
+  fill: currentColor;
 
   margin-left: 6px;
 }

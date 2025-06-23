@@ -4,6 +4,15 @@
 }
 
 .logo {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100px;
   height: 20px;
   background-color: #ffffff;
@@ -23,6 +32,7 @@
 .logo__icon {
   width: 14px;
   height: 15px;
+  fill: currentColor;
   margin-left: 6px;
 }
 
@@ -39,4 +49,33 @@
   background-color: #007bff;
   height: 50px;
   padding: 0 20px;
+}
+
+.menu-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 72px;
+  height: 22px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #007bff;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.menu-icon {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  margin-right: 12px;
 }/*# sourceMappingURL=main.css.map */

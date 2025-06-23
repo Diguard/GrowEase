@@ -1,0 +1,24 @@
+.logo {
+  width: 100px;
+  height: 20px;
+
+  background-color: $primary-color;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.logo__text {
+  color: $second-color;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.logo__icon {
+  width: 14px;
+  height: 15px;
+
+  margin-left: 6px;
+}

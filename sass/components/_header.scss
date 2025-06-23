@@ -1,0 +1,10 @@
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: $second-color;
+
+  height: 50px;
+  padding: 0 20px;
+}

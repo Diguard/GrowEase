@@ -9,6 +9,13 @@
   background-color: $primary-color;
   border-radius: 16px;
   text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    width: 116px;
+    height: 24px;
+
+    border-radius: 18px;
+  }
 }
 
 .logo__text {
@@ -18,12 +25,21 @@
   font-weight: 700;
   font-size: 12px;
   text-decoration: none;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 15px;
+  }
 }
 
 .logo__icon {
-  width: 14px;
+  width: 13px;
   height: 15px;
   fill: currentColor;
 
   margin-left: 6px;
+
+  @media screen and (min-width: $tablet) {
+    width: 15px;
+    height: 16px;
+  }
 }

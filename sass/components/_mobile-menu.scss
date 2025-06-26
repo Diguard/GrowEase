@@ -10,12 +10,12 @@
   margin: 0;
   padding: 0;
 
-  background-color: $second-color;
+  background-color: $primary;
 
   font-family: $font-main;
   font-weight: 700;
   font-size: 14px;
-  color: $primary-color;
+  color: $secondary;
   cursor: pointer;
 
   @media screen and (min-width: 1439px) {

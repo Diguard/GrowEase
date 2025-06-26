@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
 
-  background-color: $second-color;
+  background-color: $primary;
 
   height: 50px;
   padding: 0 20px;
@@ -30,7 +30,7 @@
     padding-top: 32px;
     padding-bottom: 32px;
 
-    color: $primary-color;
+    color: $secondary;
     text-decoration: none;
     font-weight: 600;
     font-size: 12px;
@@ -54,10 +54,10 @@
   margin: 0;
   padding: 0;
 
-  background-color: #f39c12;
+  background-color: $accent;
   border-radius: 20px;
 
-  color: $primary-color;
+  color: $secondary;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;

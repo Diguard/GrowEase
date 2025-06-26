@@ -2,8 +2,11 @@
 $font-main: "Work Sans", sans-serif;
 
 // color
-$primary-color: #ffffff;
-$second-color: #007bff;
+$primary: #007bff;
+$secondary: #ffffff;
+$accent: #f39c12;
+$background: #f4f4f4;
+$text: #000000;
 
 // mixin
 @mixin flex-center {
@@ -13,5 +16,6 @@ $second-color: #007bff;
 }
 
 // adaptive
+$mobile: 375px;
 $tablet: 1024px;
 $desktop: 1440px;

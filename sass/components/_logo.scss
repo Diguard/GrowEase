@@ -16,6 +16,13 @@
 
     border-radius: 18px;
   }
+
+  @media screen and (min-width: $desktop) {
+    width: 164px;
+    height: 33px;
+
+    border-radius: 26px;
+  }
 }
 
 .logo__text {
@@ -29,6 +36,10 @@
   @media screen and (min-width: $tablet) {
     font-size: 15px;
   }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 21px;
+  }
 }
 
 .logo__icon {
@@ -41,5 +52,10 @@
   @media screen and (min-width: $tablet) {
     width: 15px;
     height: 16px;
+  }
+
+   @media screen and (min-width: $desktop) {
+    width: 20px;
+    height: 23px;
   }
 }

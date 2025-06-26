@@ -16,6 +16,11 @@
   font-weight: 700;
   font-size: 14px;
   color: $primary-color;
+  cursor: pointer;
+
+  @media screen and (min-width: 1439px) {
+    display: none;
+  }
 }
 
 .menu-icon {

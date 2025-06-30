@@ -21,7 +21,7 @@
       crossorigin
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -34,7 +34,7 @@
     />
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="header__container">
         <div class="logo">
           <a
@@ -125,7 +125,7 @@
             >
               Get a Started
             </button>
-            <p class="intro__text">
+            <p class="intro__text-btn">
               Try GrowEase premium for a powerful business boost, or start free
               with our essential tools
             </p>
@@ -135,11 +135,18 @@
         <img
           class="intro__img"
           srcset="
-            ./images/intro/intropicture-269.jpg 269w,
-            ./images/intro/intropicture-367.jpg 367w,
-            ./images/intro/intropicture-538.jpg 538w,
-            ./images/intro/intropicture-733.jpg 733w
+            ./images/intro/intropicture-269.jpg   269w,
+            ./images/intro/intropicture-367.jpg   367w,
+            ./images/intro/intropicture-516.jpg   516w,
+            ./images/intro/intropicture-538.jpg   538w,
+            ./images/intro/intropicture-733.jpg   733w,
+            ./images/intro/intropicture-1031.jpg 1031w
           "
+          sizes="
+              (max-width: 375px) 269px,
+              (min-width: 768px) and (max-width: 1024px) 367px,
+              (min-width: 1440px) 516px
+            "
           src="./images/intro/intropicture-269.jpg"
           alt="Growth statistics"
         />

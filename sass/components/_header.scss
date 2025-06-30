@@ -1,3 +1,7 @@
+.header {
+  background-color: $primary;
+}
+
 .header__container {
   display: flex;
   justify-content: space-between;
@@ -7,13 +11,16 @@
 
   height: 50px;
   padding: 0 20px;
+  margin: 0 auto;
 
   @media screen and (min-width: $tablet) {
+    width: $tablet;
     height: 80px;
     padding: 0 69px;
   }
 
   @media screen and (min-width: $desktop) {
+    width: $desktop;
     height: 90px;
     padding: 0 91px;
   }

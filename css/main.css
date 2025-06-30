@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 ul {
@@ -96,6 +96,10 @@ img {
   }
 }
 
+.header {
+  background-color: #007bff;
+}
+
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -109,15 +113,18 @@ img {
   background-color: #007bff;
   height: 50px;
   padding: 0 20px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 1024px) {
   .header__container {
+    width: 1024px;
     height: 80px;
     padding: 0 69px;
   }
 }
 @media screen and (min-width: 1440px) {
   .header__container {
+    width: 1440px;
     height: 90px;
     padding: 0 91px;
   }
@@ -245,8 +252,14 @@ img {
         -ms-flex-direction: row;
             flex-direction: row;
     width: 1024px;
-    gap: 50px;
+    gap: 45px;
     padding: 50px 66px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .intro__container {
+    width: 1440px;
+    padding: 82px 94px;
   }
 }
 
@@ -321,6 +334,11 @@ img {
     gap: 9px;
   }
 }
+@media screen and (min-width: 1024px) {
+  .intro__content-btn {
+    gap: 13px;
+  }
+}
 
 .intro__tittle {
   font-size: 12px;
@@ -330,8 +348,13 @@ img {
 @media screen and (min-width: 1024px) {
   .intro__tittle {
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 800;
     text-align: start;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .intro__tittle {
+    font-size: 20px;
   }
 }
 
@@ -348,6 +371,11 @@ img {
     text-align: start;
   }
 }
+@media screen and (min-width: 1440px) {
+  .intro__subtittle {
+    font-size: 48px;
+  }
+}
 
 .intro__text {
   font-size: 12px;
@@ -356,6 +384,28 @@ img {
 @media screen and (min-width: 1024px) {
   .intro__text {
     text-align: start;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .intro__text {
+    width: 560px;
+    font-size: 16px;
+  }
+}
+
+.intro__text-btn {
+  font-size: 12px;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .intro__text-btn {
+    text-align: start;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .intro__text-btn {
+    width: 330px;
+    font-size: 14px;
   }
 }
 
@@ -382,16 +432,19 @@ img {
 }
 
 .intro__img {
-  width: 100%;
-  max-width: 269px;
+  width: min(100%, 269px);
   height: auto;
   display: block;
   border-radius: 15px;
 }
 @media screen and (min-width: 1024px) {
   .intro__img {
-    width: 100%;
-    max-width: 367px;
+    width: min(100%, 367px);
     border-radius: 20px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .intro__img {
+    width: min(100%, 516px);
   }
 }/*# sourceMappingURL=main.css.map */

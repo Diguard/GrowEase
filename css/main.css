@@ -454,7 +454,7 @@ img {
   }
 }
 
-.section__definition {
+.definition-section {
   background-color: #007bff;
 }
 
@@ -722,4 +722,57 @@ img {
   .definition__btn {
     gap: 21px;
   }
+}
+
+.marketing-section {
+  background-color: #007bff;
+  padding: 50px 42px;
+}
+
+.marketing__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+.marketing__content-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.marketing__content-text {
+  font-size: 12px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.marketing__price-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 37px;
+}
+
+.marketing__card {
+  width: 100%;
+  max-width: 207px;
+  height: 310px;
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 30px 33px;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,42 @@
+.marketing-section {
+  background-color: $primary;
+  padding: 50px 42px;
+}
+
+.marketing__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  text-align: center;
+
+  &-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: $secondary;
+  }
+
+  &-text {
+    font-size: 12px;
+    font-weight: 400;
+    color: $secondary;
+  }
+}
+
+.marketing__price-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 37px;
+}
+
+.marketing__card {
+  width: 100%;
+  max-width: 207px;
+  height: 310px;
+  background-color: $secondary;
+  border-radius: 18px;
+
+  padding: 30px 33px;
+}

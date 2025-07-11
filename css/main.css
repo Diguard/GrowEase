@@ -726,7 +726,25 @@ img {
 
 .marketing-section {
   background-color: #007bff;
-  padding: 50px 42px;
+  padding: 50px 0;
+}
+
+.marketing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 35px;
+  margin: 0 auto;
+  padding: 0 42px;
+}
+@media screen and (min-width: 375px) {
+  .marketing {
+    width: 375px;
+  }
 }
 
 .marketing__content {
@@ -769,10 +787,100 @@ img {
 }
 
 .marketing__card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
   width: 100%;
   max-width: 207px;
   height: 310px;
   background-color: #ffffff;
   border-radius: 18px;
-  padding: 30px 33px;
+  padding: 30px 23px;
+  -webkit-box-shadow: inset 5px 5px 10px rgba(28, 117, 255, 0.2);
+          box-shadow: inset 5px 5px 10px rgba(28, 117, 255, 0.2);
+}
+.marketing__card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+.marketing__card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+}
+.marketing__card-subtitle {
+  font-size: 11px;
+  font-weight: 500;
+  color: #000000;
+}
+.marketing__card-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 13px;
+}
+.marketing__card-icon {
+  width: 14px;
+  height: 14px;
+}
+.marketing__card-icon-price {
+  width: 19px;
+  height: 19px;
+  fill: #999999;
+}
+.marketing__card-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #000000;
+}
+.marketing__card-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #999999;
+  margin-top: 10px;
+}
+.marketing__card-button {
+  position: absolute;
+  top: 79%;
+  left: 21%;
+  width: 119px;
+  height: 36px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: #007bff;
+  border-radius: 18px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
 }/*# sourceMappingURL=main.css.map */

@@ -900,7 +900,7 @@ img {
   .marketing__card {
     max-width: 320px;
     height: 478px;
-    padding: 50px 0px;
+    padding: 65px 0px;
     padding-left: 45px;
     gap: 30px;
   }
@@ -1081,7 +1081,7 @@ img {
     height: 41px;
     font-size: 16px;
     position: absolute;
-    top: 1%;
+    top: 3%;
     left: 57%;
   }
 }
@@ -1261,6 +1261,12 @@ img {
   padding: 50px 0;
   background-color: #f8faff;
 }
+@media screen and (min-width: 1024px) {
+  .reviews-section {
+    padding-top: 45px;
+    padding-bottom: 67px;
+  }
+}
 
 .reviews {
   display: -webkit-box;
@@ -1285,11 +1291,23 @@ img {
     width: 375px;
   }
 }
+@media screen and (min-width: 1024px) {
+  .reviews {
+    width: 1024px;
+    gap: 80px;
+    padding: 0 65px;
+  }
+}
 .reviews__title {
   font-size: 30px;
   font-weight: 700;
   color: #000000;
   text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .reviews__title {
+    font-size: 48px;
+  }
 }
 
 .reviews__card-list {
@@ -1301,6 +1319,18 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .reviews__card-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 80px;
+  }
 }
 .reviews__card-item {
   position: relative;
@@ -1372,11 +1402,24 @@ img {
           flex-direction: column;
   gap: 20px;
 }
+@media screen and (min-width: 1024px) {
+  .reviews__box {
+    gap: 39px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .reviews__box-title {
   font-size: 19px;
   font-weight: 700;
   color: #000000;
   text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .reviews__box-title {
+    font-size: 32px;
+  }
 }
 .reviews__box-btn {
   height: 32px;
@@ -1390,8 +1433,21 @@ img {
   color: #ffffff;
   cursor: pointer;
 }
+@media screen and (min-width: 1024px) {
+  .reviews__box-btn {
+    width: 100%;
+    max-width: 353px;
+    height: 50px;
+    font-size: 14px;
+  }
+}
 .reviews__box-accent {
   font-size: 12px;
   font-weight: 400;
   color: #ffffff;
+}
+@media screen and (min-width: 1024px) {
+  .reviews__box-accent {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=main.css.map */

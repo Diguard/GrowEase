@@ -6,6 +6,10 @@
     padding-top: 45px;
     padding-bottom: 67px;
   }
+
+  @media screen and (min-width: $desktop) {
+    padding: 103px 0;
+  }
 }
 
 .reviews {
@@ -26,6 +30,11 @@
     padding: 0 78px;
   }
 
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+    gap: 85px;
+  }
+
   &__title {
     font-size: 30px;
     font-weight: 700;
@@ -34,6 +43,10 @@
 
     @media screen and (min-width: $tablet) {
       font-size: 36px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      font-size: 48px;
     }
   }
 }
@@ -49,6 +62,10 @@
       flex-direction: row;
       gap: 66px;
     }
+
+    @media screen and (min-width: $desktop) {
+      gap: 93px;
+    }
   }
 
   &-item {
@@ -62,11 +79,29 @@
     background-color: #fefeff;
 
     box-shadow: 20px 20px 36px rgba(0, 0, 0, 0.2);
+
+    @media screen and (min-width: $desktop) {
+      width: 100%;
+      max-width: 344px;
+      height: 596px;
+
+      border-radius: 20px;
+    }
   }
 
   &-img {
+    width: 100%;
+    max-width: 244px;
+    height: auto;
+
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+
+    @media screen and (min-width: $desktop) {
+      max-width: 344px;
+      border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    }
   }
 
   &-box {
@@ -75,10 +110,18 @@
     gap: 45px;
 
     padding: 23px 15px;
+
+    @media screen and (min-width: $desktop) {
+      padding: 30px 15px;
+    }
   }
 
   &-box--spaced {
     gap: 25px;
+
+    @media screen and (min-width: $desktop) {
+      gap: 17px;
+    }
   }
 
   &-text {
@@ -86,6 +129,10 @@
     font-weight: 500;
     color: $text;
     line-height: 1.6;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 18px;
+    }
   }
 
   &-author {
@@ -93,6 +140,10 @@
     font-weight: 700;
     color: $text;
     line-height: 1.5;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 19px;
+    }
   }
 
   &-rating {
@@ -105,13 +156,26 @@
     gap: 7px;
 
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 800;
     color: $text;
+
+    @media screen and (min-width: $desktop) {
+      top: 88%;
+      left: 66%;
+      font-size: 22px;
+
+      gap: 10px;
+    }
   }
 
   &-icon {
     width: 21px;
     height: 21px;
+
+    @media screen and (min-width: $desktop) {
+      width: 25px;
+      height: 25px;
+    }
   }
 }
 
@@ -125,6 +189,10 @@
     align-items: center;
   }
 
+  @media screen and (min-width: $desktop) {
+    gap: 39px;
+  }
+
   &-title {
     font-size: 19px;
     font-weight: 700;
@@ -133,6 +201,10 @@
 
     @media screen and (min-width: $tablet) {
       font-size: 24px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 32px;
     }
   }
 
@@ -157,6 +229,14 @@
       max-width: 290px;
       height: 40px;
     }
+
+    @media screen and (min-width: $desktop) {
+      width: 100%;
+      max-width: 353px;
+      height: 50px;
+
+      font-size: 14px;
+    }
   }
 
   &-accent {
@@ -164,8 +244,8 @@
     font-weight: 400;
     color: $secondary;
 
-    @media screen and (min-width: $tablet) {
-      
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
     }
   }
 }

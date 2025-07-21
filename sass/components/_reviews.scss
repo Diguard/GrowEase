@@ -45,7 +45,7 @@
       font-size: 36px;
     }
 
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $desktop) {
       font-size: 48px;
     }
   }
@@ -69,8 +69,6 @@
   }
 
   &-item {
-    position: relative;
-
     width: 100%;
     max-width: 244px;
     height: 424px;
@@ -79,6 +77,12 @@
     background-color: #fefeff;
 
     box-shadow: 20px 20px 36px rgba(0, 0, 0, 0.2);
+
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
 
     @media screen and (min-width: $desktop) {
       width: 100%;
@@ -100,19 +104,19 @@
     @media screen and (min-width: $desktop) {
       max-width: 344px;
       border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+      border-top-right-radius: 20px;
     }
   }
 
   &-box {
     display: flex;
     flex-direction: column;
-    gap: 45px;
+    gap: 40px;
 
-    padding: 23px 15px;
+    padding: 18px 15px;
 
     @media screen and (min-width: $desktop) {
-      padding: 30px 15px;
+      padding: 35px 20px;
     }
   }
 
@@ -128,7 +132,7 @@
     font-size: 13px;
     font-weight: 500;
     color: $text;
-    line-height: 1.6;
+    line-height: 1.5;
 
     @media screen and (min-width: $desktop) {
       font-size: 18px;
@@ -146,11 +150,18 @@
     }
   }
 
-  &-rating {
-    position: absolute;
-    top: 90%;
-    left: 65%;
+  &-footer {
+    display: flex;
+    justify-content: flex-end;
 
+    margin-right: 18px;
+
+     @media screen and (min-width: $desktop) {
+       margin-right: 25px;
+    }
+  }
+
+  &-rating {
     display: flex;
     align-items: center;
     gap: 7px;
@@ -160,8 +171,6 @@
     color: $text;
 
     @media screen and (min-width: $desktop) {
-      top: 88%;
-      left: 66%;
       font-size: 22px;
 
       gap: 10px;

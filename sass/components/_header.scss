@@ -69,6 +69,13 @@
   font-weight: 700;
   cursor: pointer;
 
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: lighten($accent, 10%);
+    transform: scale(1.05);
+  }
+
   @media screen and (max-width: 1023px) {
     display: none;
   }

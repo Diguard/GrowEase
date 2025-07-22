@@ -10,6 +10,13 @@
   border-radius: 16px;
   text-align: center;
 
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: darken($secondary, 1%);
+      transform: scale(1.05);
+    }
+
   @media screen and (min-width: $tablet) {
     width: 116px;
     height: 24px;

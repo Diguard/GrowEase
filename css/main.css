@@ -5,6 +5,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  line-height: 1.2;
 }
 
 ul {
@@ -42,6 +43,15 @@ img {
   background-color: #ffffff;
   border-radius: 16px;
   text-align: center;
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+.logo:hover {
+  background-color: rgb(252.45, 252.45, 252.45);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 @media screen and (min-width: 1024px) {
   .logo {
@@ -169,6 +179,15 @@ img {
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+.header__button:hover {
+  background-color: rgb(245.4578313253, 176.2771084337, 66.5421686747);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 @media screen and (max-width: 1023px) {
   .header__button {
@@ -421,6 +440,15 @@ img {
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+.intro__button:hover {
+  background-color: rgb(0, 98.4, 204);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 @media screen and (min-width: 1024px) {
   .intro__button {
@@ -1146,7 +1174,7 @@ img {
   transition: background-color 0.3s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 .marketing__card-button:hover {
-  background-color: #0062cc;
+  background-color: rgb(0, 98.4, 204);
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
@@ -1578,6 +1606,15 @@ img {
   font-weight: 700;
   color: #ffffff;
   cursor: pointer;
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+.reviews__box-btn:hover {
+  background-color: rgb(0, 98.4, 204);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 @media screen and (min-width: 1024px) {
   .reviews__box-btn {
@@ -1603,4 +1640,176 @@ img {
   .reviews__box-accent {
     font-size: 14px;
   }
+}
+
+.faq-section {
+  background-color: #f4f4f4;
+  padding: 50px 0;
+}
+
+.faq {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 45px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media screen and (min-width: 375px) {
+  .faq {
+    width: 375px;
+  }
+}
+
+.faq__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+.faq__body-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #000000;
+  text-align: center;
+  line-height: 1.5;
+}
+.faq__body-text {
+  font-size: 12px;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+}
+.faq__body-list {
+  width: 100%;
+  max-width: 333px;
+  border: solid 1px #000000;
+  border-radius: 10px;
+}
+.faq__body-list :last-child {
+  border-bottom: none;
+}
+.faq__body-question {
+  padding: 4px 10px;
+  font-size: 7px;
+  font-weight: 400;
+  color: #000000;
+  border-bottom: solid 1px #000000;
+}
+.faq__body-subtitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+}
+.faq__body-button {
+  width: 95px;
+  height: 32px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: #007bff;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+.faq__body-button:hover {
+  background-color: rgb(0, 98.4, 204);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.faq__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+.faq__footer-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #000000;
+  text-align: center;
+  line-height: 1.5;
+}
+.faq__footer-text {
+  font-size: 12px;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 26px;
+}
+.faq__footer-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+.faq__footer-button--get {
+  width: 159px;
+  height: 32px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: #007bff;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+.faq__footer-button--get:hover {
+  background-color: rgb(0, 98.4, 204);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.faq__footer-button--talk {
+  width: 136px;
+  height: 32px;
+  border: solid 1px #007bff;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #007bff;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+.faq__footer-button--talk:hover {
+  background-color: rgb(231.25, 231.25, 231.25);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }/*# sourceMappingURL=main.css.map */

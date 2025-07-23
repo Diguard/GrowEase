@@ -1664,6 +1664,13 @@ img {
     width: 375px;
   }
 }
+@media screen and (min-width: 1024px) {
+  .faq {
+    width: 1024px;
+    gap: 99px;
+    padding: 0 133px;
+  }
+}
 
 .faq__body {
   display: -webkit-box;
@@ -1678,6 +1685,26 @@ img {
           align-items: center;
   gap: 20px;
 }
+@media screen and (min-width: 1024px) {
+  .faq__body {
+    gap: 49px;
+  }
+}
+.faq__body-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+@media screen and (min-width: 1024px) {
+  .faq__body-head {
+    gap: 20px;
+  }
+}
 .faq__body-title {
   font-size: 32px;
   font-weight: 800;
@@ -1685,17 +1712,32 @@ img {
   text-align: center;
   line-height: 1.5;
 }
+@media screen and (min-width: 1024px) {
+  .faq__body-title {
+    font-size: 36px;
+  }
+}
 .faq__body-text {
   font-size: 12px;
   font-weight: 400;
   color: #000000;
   text-align: center;
 }
+@media screen and (min-width: 1024px) {
+  .faq__body-text {
+    font-size: 14px;
+  }
+}
 .faq__body-list {
   width: 100%;
   max-width: 333px;
   border: solid 1px #000000;
   border-radius: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .faq__body-list {
+    max-width: 728px;
+  }
 }
 .faq__body-list :last-child {
   border-bottom: none;
@@ -1707,11 +1749,47 @@ img {
   color: #000000;
   border-bottom: solid 1px #000000;
 }
+@media screen and (min-width: 1024px) {
+  .faq__body-question {
+    font-size: 14px;
+    padding: 8px 22px;
+  }
+}
+.faq__body .faq__body-support {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .faq__body .faq__body-support {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 24px;
+  }
+}
 .faq__body-subtitle {
   font-size: 12px;
   font-weight: 700;
   color: #000000;
   text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .faq__body-subtitle {
+    font-size: 16px;
+  }
 }
 .faq__body-button {
   width: 95px;
@@ -1735,6 +1813,13 @@ img {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
+@media screen and (min-width: 1024px) {
+  .faq__body-button {
+    width: 133px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
 
 .faq__footer {
   display: -webkit-box;
@@ -1749,12 +1834,23 @@ img {
           align-items: center;
   gap: 8px;
 }
+@media screen and (min-width: 1024px) {
+  .faq__footer {
+    gap: 15px;
+  }
+}
 .faq__footer-title {
   font-size: 30px;
   font-weight: 800;
   color: #000000;
   text-align: center;
   line-height: 1.5;
+}
+@media screen and (min-width: 1024px) {
+  .faq__footer-title {
+    font-size: 35px;
+    font-weight: 700;
+  }
 }
 .faq__footer-text {
   font-size: 12px;
@@ -1763,11 +1859,21 @@ img {
   text-align: center;
   margin-bottom: 26px;
 }
+@media screen and (min-width: 1024px) {
+  .faq__footer-text {
+    font-size: 16px;
+  }
+}
 .faq__footer-actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 8px;
+}
+@media screen and (min-width: 1024px) {
+  .faq__footer-actions {
+    font-size: 11px;
+  }
 }
 .faq__footer-button--get {
   width: 159px;
@@ -1791,6 +1897,13 @@ img {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
+@media screen and (min-width: 1024px) {
+  .faq__footer-button--get {
+    width: 192px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
 .faq__footer-button--talk {
   width: 136px;
   height: 32px;
@@ -1812,4 +1925,11 @@ img {
   background-color: rgb(231.25, 231.25, 231.25);
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+@media screen and (min-width: 1024px) {
+  .faq__footer-button--talk {
+    width: 169px;
+    height: 40px;
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=main.css.map */

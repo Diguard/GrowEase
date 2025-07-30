@@ -2,6 +2,11 @@
   background-color: #5c5c5c;
   padding-top: 60px;
   padding-bottom: 45px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 32px;
+    padding-bottom: 39px;
+  }
 }
 
 .footer__logo {
@@ -18,9 +23,14 @@
 
   transition: background-color 0.3s ease, transform 0.2s ease;
 
-  &:hover {
+  &:hover &:focus {
     background-color: darken($secondary, 1%);
     transform: scale(1.05);
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 138px;
+    height: 28px;
   }
 
   &-text {
@@ -30,6 +40,10 @@
     font-weight: 700;
     font-size: 24px;
     text-decoration: none;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 18px;
+    }
   }
 
   &-icon {
@@ -38,18 +52,57 @@
     fill: currentColor;
 
     margin-left: 4px;
+
+    @media screen and (min-width: $tablet) {
+      width: 17px;
+      height: 19px;
+    }
   }
 }
 
 .footer {
   position: relative;
-
   @include flex-column;
   margin: 0 auto;
   gap: 50px;
 
   @media screen and (min-width: $mobile) {
     width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  &__head {
+    @include flex-column;
+    gap: 30px;
+    width: 100%;
+
+    @media screen and (min-width: $tablet) {
+      gap: 44px;
+      align-items: flex-start;
+      padding-left: 130px;
+    }
+  }
+
+  &__logo::before {
+    content: "";
+    position: absolute;
+    width: 865px;
+    height: 1px;
+    background-color: $secondary;
+    top: 9.5%;
+    left: 55%;
+    transform: translateX(-50%);
+
+    @media screen and (max-width: 1023px) {
+      display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+      display: block;
+    }
   }
 
   &__title {
@@ -60,9 +113,38 @@
     font-weight: 400;
     color: $secondary;
     text-align: center;
+
+    @media screen and (min-width: $tablet) {
+      max-width: none;
+      text-align: start;
+    }
+  }
+
+  &__body {
+    @include flex-column;
+    gap: 50px;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 160px;
+    }
+  }
+
+  &__body-box {
+    @include flex-column;
+    gap: 50px;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 54px;
+    }
   }
 
   &__form {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -77,15 +159,23 @@
     width: 250px;
     height: 1px;
     background-color: $secondary;
-    top: 30.5%;
+    top: 140%;
     left: 50%;
     transform: translateX(-50%);
+
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
   }
 
   &__form-title {
     font-size: 12px;
     font-weight: 600;
     color: $secondary;
+
+    @media screen and (min-width: $tablet) {
+      font-weight: 400;
+    }
   }
 
   &__form-box {
@@ -160,7 +250,7 @@
 
     transition: all 0.3s ease;
 
-    &:focus &:hover {
+    &:hover {
       color: $primary;
     }
   }
@@ -169,6 +259,11 @@
     display: flex;
     gap: 40px;
     padding: 0 55px;
+
+    @media screen and (min-width: $tablet) {
+      gap: 62px;
+      padding: 0;
+    }
   }
 
   &__quicklinks::before {
@@ -180,16 +275,33 @@
     top: 92%;
     left: 50%;
     transform: translateX(-50%);
+
+    @media screen and (min-width: $tablet) {
+      width: 1px;
+      height: 310px;
+      top: 25%;
+      left: 51.6%;
+    }
   }
 
   &__quicklinks-left {
     @include flex-column;
     gap: 40px;
+
+    @media screen and (min-width: $tablet) {
+      align-items: flex-start;
+      gap: 20px;
+    }
   }
 
   &__quicklinks-right {
     @include flex-column;
     gap: 40px;
+
+    @media screen and (min-width: $tablet) {
+      align-items: flex-start;
+      gap: 11px;
+    }
   }
 
   &__quicklinks-title {
@@ -201,6 +313,10 @@
   &__quicklinks-list {
     @include flex-column;
     gap: 3px;
+
+    @media screen and (min-width: $tablet) {
+      align-items: flex-start;
+    }
   }
 
   &__quicklinks-link {
@@ -208,26 +324,73 @@
     font-weight: 400;
     color: $secondary;
     text-decoration: none;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $primary;
+    }
   }
 
   &__quicklinks-support {
     @include flex-column;
     text-align: center;
+
+    @media screen and (min-width: $tablet) {
+      align-items: flex-start;
+    }
   }
 
   &__quicklinks-resources {
     @include flex-column;
     text-align: center;
+
+    @media screen and (min-width: $tablet) {
+      align-items: flex-start;
+    }
   }
 
   &__quicklinks-legal {
     @include flex-column;
     text-align: center;
+
+    @media screen and (min-width: $tablet) {
+      align-items: flex-start;
+    }
   }
 
   &__copyright {
+    position: relative;
     @include flex-column;
     gap: 5px;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      gap: 15px;
+
+      margin-top: 20px;
+    }
+  }
+
+  &__copyright::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 25px;
+    background-color: $secondary;
+    top: -15%;
+    left: 53.5%;
+    transform: translateX(-50%);
+
+    @media screen and (max-width: 1023px) {
+      display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+      display: block;
+    }
   }
 
   &__copyright-text {
@@ -248,6 +411,12 @@
     color: $secondary;
     text-decoration: none;
     border-right: solid 1px $secondary;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $primary;
+    }
   }
 
   &__copyright-box :last-child &__copyright-link {

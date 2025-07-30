@@ -3,9 +3,14 @@
   padding-top: 60px;
   padding-bottom: 45px;
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $tablet) {
     padding-top: 32px;
     padding-bottom: 39px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 48px;
+    padding-bottom: 59px;
   }
 }
 
@@ -28,7 +33,7 @@
     transform: scale(1.05);
   }
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: 376px) and (max-width: 1439px) {
     width: 138px;
     height: 28px;
   }
@@ -41,7 +46,7 @@
     font-size: 24px;
     text-decoration: none;
 
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: 376px) and (max-width: 1439px) {
       font-size: 18px;
     }
   }
@@ -53,10 +58,31 @@
 
     margin-left: 4px;
 
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: 376px) and (max-width: 1439px) {
       width: 17px;
       height: 19px;
     }
+  }
+}
+
+.footer__logo::before {
+  content: "";
+  position: absolute;
+  width: 865px;
+  height: 1px;
+  background-color: $secondary;
+  top: 9.5%;
+  left: 55%;
+  transform: translateX(-50%);
+
+  @media screen and (max-width: 1023px) {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+    width: 1216px;
+    top: 10.5%;
   }
 }
 
@@ -74,6 +100,11 @@
     width: $tablet;
   }
 
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+    gap: 126px;
+  }
+
   &__head {
     @include flex-column;
     gap: 30px;
@@ -84,24 +115,10 @@
       align-items: flex-start;
       padding-left: 130px;
     }
-  }
 
-  &__logo::before {
-    content: "";
-    position: absolute;
-    width: 865px;
-    height: 1px;
-    background-color: $secondary;
-    top: 9.5%;
-    left: 55%;
-    transform: translateX(-50%);
-
-    @media screen and (max-width: 1023px) {
-      display: none;
-    }
-
-    @media screen and (min-width: $tablet) {
-      display: block;
+    @media screen and (min-width: $desktop) {
+      gap: 62px;
+      padding-left: 184px;
     }
   }
 
@@ -118,6 +135,10 @@
       max-width: none;
       text-align: start;
     }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+    }
   }
 
   &__body {
@@ -128,6 +149,10 @@
       display: flex;
       flex-direction: row-reverse;
       gap: 160px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      gap: 400px;
     }
   }
 
@@ -150,7 +175,11 @@
     gap: 15px;
 
     width: 100%;
-    max-width: 325px;
+    min-width: 325px;
+
+    @media screen and (min-width: $desktop) {
+      width: 424px;
+    }
   }
 
   &__form::before {
@@ -176,18 +205,27 @@
     @media screen and (min-width: $tablet) {
       font-weight: 400;
     }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+    }
   }
 
   &__form-box {
     display: flex;
     gap: 5px;
     width: 100%;
-    max-width: 330px;
+    min-width: 330px;
+
+    @media screen and (min-width: $desktop) {
+      gap: 9px;
+      width: 424px;
+    }
   }
 
   &__form-input {
     width: 100%;
-    max-width: 224px;
+    min-width: 224px;
     height: 30px;
 
     border-radius: 4px;
@@ -199,6 +237,17 @@
     font-weight: 500;
 
     box-shadow: inset 1px 1px 8px rgba(28, 117, 255, 0.3);
+
+    @media screen and (min-width: $desktop) {
+      max-width: 280px;
+      height: 40px;
+
+      font-size: 14px;
+
+      border-radius: 5px;
+
+      padding: 8px 8px;
+    }
   }
 
   &__form-button {
@@ -223,6 +272,14 @@
     &:hover {
       background-color: darken($primary, 10%);
       transform: scale(1.05);
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 133px;
+      height: 40px;
+
+      font-size: 14px;
+      border-radius: 5px;
     }
   }
 
@@ -253,6 +310,10 @@
     &:hover {
       color: $primary;
     }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+    }
   }
 
   &__quicklinks {
@@ -263,6 +324,10 @@
     @media screen and (min-width: $tablet) {
       gap: 62px;
       padding: 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+      gap: 87px;
     }
   }
 
@@ -282,6 +347,12 @@
       top: 25%;
       left: 51.6%;
     }
+
+    @media screen and (min-width: $desktop) {
+      height: 440px;
+      top: 25%;
+      left: 50%;
+    }
   }
 
   &__quicklinks-left {
@@ -291,6 +362,10 @@
     @media screen and (min-width: $tablet) {
       align-items: flex-start;
       gap: 20px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      gap: 28px;
     }
   }
 
@@ -302,12 +377,20 @@
       align-items: flex-start;
       gap: 11px;
     }
+
+    @media screen and (min-width: $desktop) {
+      gap: 16px;
+    }
   }
 
   &__quicklinks-title {
     font-size: 12px;
     font-weight: 700;
     color: $secondary;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+    }
   }
 
   &__quicklinks-list {
@@ -329,6 +412,10 @@
 
     &:hover {
       color: $primary;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
     }
   }
 
@@ -372,6 +459,10 @@
 
       margin-top: 20px;
     }
+
+    @media screen and (min-width: $desktop) {
+      gap: 20px;
+    }
   }
 
   &__copyright::before {
@@ -397,6 +488,10 @@
     font-size: 12px;
     font-weight: 400;
     color: $secondary;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+    }
   }
 
   &__copyright-box {
@@ -416,6 +511,10 @@
 
     &:hover {
       color: $primary;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
     }
   }
 

@@ -26,12 +26,6 @@
   border-radius: 30px;
   text-align: center;
 
-  transition: background-color 0.3s ease, transform 0.2s ease;
-
-  &:hover &:focus {
-    background-color: darken($secondary, 1%);
-    transform: scale(1.05);
-  }
 
   @media screen and (min-width: 376px) and (max-width: 1439px) {
     width: 138px;
@@ -75,11 +69,11 @@
   left: 55%;
   transform: translateX(-50%);
 
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 1439px) {
     display: none;
   }
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $desktop) {
     display: block;
     width: 1216px;
     top: 10.5%;
@@ -351,7 +345,7 @@
     @media screen and (min-width: $desktop) {
       height: 440px;
       top: 25%;
-      left: 50%;
+      left: 51.3%;
     }
   }
 

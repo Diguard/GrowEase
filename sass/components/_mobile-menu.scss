@@ -1,24 +1,40 @@
+// No-csroll mobile-menu
+.no-scroll {
+  overflow-y: hidden;
+}
+
+// Mobile Menu Button
+
 .menu-button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
 
-  width: 72px;
-  height: 22px;
+  z-index: 999;
 
-  border: 0;
-  margin: 0;
+  width: 40px;
+  height: 40px;
+
   padding: 0;
+  margin: 0;
+  border: 0;
 
   background-color: $primary;
 
-  font-family: $font-main;
-  font-weight: 700;
-  font-size: 14px;
   color: $secondary;
   cursor: pointer;
 
-  @media screen and (min-width: 1439px) {
+  & .icon-menu {
+    display: none;
+  }
+
+  &.is-open .icon-menu {
+    display: block;
+  }
+
+  &.is-open .icon-cross {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet) {
     display: none;
   }
 }
@@ -26,6 +42,91 @@
 .menu-icon {
   width: 22px;
   height: 22px;
-  fill: currentColor;
-  margin-right: 12px;
+  fill: $secondary;
+}
+
+// Mobile Menu Container
+.menu-container {
+  padding: 60px 0;
+
+  z-index: 1;
+
+  background-color: $primary;
+
+  @media screen and (max-width: 1023px) {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    &.is-open {
+      @include flex-column;
+      height: 100vh;
+      justify-content: space-between;
+    }
+  }
+}
+
+// Mobile Navigation
+.mobile-navigation {
+  @include flex-column;
+  gap: 50px;
+
+  &__list {
+    @include flex-column;
+    gap: 32px;
+  }
+
+  &__link {
+    color: $secondary;
+    list-style: none;
+    font-weight: 500;
+    font-size: 30px;
+    text-decoration: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+// Mobile Social Links
+.mobile-menu__socials {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.2s ease;
+    }
+  }
+
+  &-icon {
+    width: 20px;
+    height: 20px;
+    fill: $secondary;
+  }
+
+  &-link {
+    font-size: 12px;
+    color: $secondary;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+    }
+  }
 }

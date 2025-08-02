@@ -91,14 +91,99 @@
 
         <button
           type="button"
-          class="menu-button"
+          class="menu-button is-open"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
         >
           <svg class="menu-icon">
-            <use href="./images/sprite.svg#icon-menu"></use>
+            <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+            <use class="icon-cross" href="./images/sprite.svg#icon-cross"></use>
           </svg>
-
-          Menu
+    
         </button>
+
+        <div
+          class="menu-container no-scroll"
+          id="menu-container"
+          data-menu
+        >
+          <div class="mobile-navigation">
+            <ul class="mobile-navigation__list">
+              <li class="mobile-navigation__item">
+                <a
+                  href="./index.html"
+                  class="mobile-navigation__link"
+                  >Home</a
+                >
+              </li>
+              <li class="mobile-navigation__item">
+                <a
+                  href="./portfolio.html"
+                  class="mobile-navigation__link"
+                  >Features</a
+                >
+              </li>
+              <li class="mobile-navigation__item">
+                <a
+                  href=""
+                  class="mobile-navigation__link"
+                  >Pricing</a
+                >
+              </li>
+              <li class="mobile-navigation__item">
+                <a
+                  href=""
+                  class="mobile-navigation__link"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+
+            <ul class="mobile-menu__socials">
+              <li class="mobile-menu__socials-item">
+                <svg class="mobile-menu__socials-icon">
+                  <use href="./images/sprite.svg#icon-linkedin"></use>
+                </svg>
+                <a
+                  href=""
+                  class="mobile-menu__socials-link"
+                  >Linkedin</a
+                >
+              </li>
+              <li class="mobile-menu__socials-item">
+                <svg class="mobile-menu__socials-icon">
+                  <use href="./images/sprite.svg#icon-x"></use>
+                </svg>
+                <a
+                  href=""
+                  class="mobile-menu__socials-link"
+                  >Twitter</a
+                >
+              </li>
+              <li class="mobile-menu__socials-item">
+                <svg class="mobile-menu__socials-icon">
+                  <use href="./images/sprite.svg#icon-instagram"></use>
+                </svg>
+                <a
+                  href=""
+                  class="mobile-menu__socials-link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mobile-menu__socials-item">
+                <svg class="mobile-menu__socials-icon">
+                  <use href="./images/sprite.svg#icon-youtube"></use>
+                </svg>
+                <a
+                  href=""
+                  class="mobile-menu__socials-link"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -1026,5 +1111,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

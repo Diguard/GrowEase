@@ -72,6 +72,10 @@
       justify-content: space-between;
     }
   }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
 }
 
 // Mobile Navigation
@@ -81,7 +85,7 @@
 
   &__list {
     @include flex-column;
-    gap: 32px;
+    gap: 25px;
   }
 
   &__link {
@@ -102,6 +106,12 @@
   display: flex;
   flex-direction: column;
   gap: 7px;
+
+  @media screen and (min-width: 376px) and (max-width: 1023px ) {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+  }
 
   &-item {
     display: flex;
@@ -129,10 +139,6 @@
 
     &:hover {
       transform: scale(1.1);
-    }
-
-    @media screen and (min-width: $desktop) {
-      font-size: 14px;
     }
   }
 }

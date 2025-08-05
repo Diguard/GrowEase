@@ -121,7 +121,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #007bff;
   height: 50px;
   padding: 0 20px;
   margin: 0 auto;
@@ -188,6 +187,9 @@ img {
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   -webkit-transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
   transition: background-color 0.3s ease, -webkit-transform 0.2s ease;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -216,24 +218,27 @@ img {
 }
 
 .menu-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 12px;
   z-index: 999;
-  width: 40px;
-  height: 40px;
+  width: 72px;
+  height: 22px;
   padding: 0;
   margin: 0;
   border: 0;
   background-color: #007bff;
+  font-size: 14px;
+  font-weight: 700;
   color: #ffffff;
   cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .menu-button .icon-menu {
   display: none;
@@ -261,7 +266,7 @@ img {
   z-index: 1;
   background-color: #007bff;
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .menu-container {
     display: none;
     position: absolute;
@@ -1922,13 +1927,10 @@ img {
     border-radius: 20px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .faq__body-list {
     max-width: 984px;
   }
-}
-.faq__body-list :last-child {
-  border-bottom: none;
 }
 .faq__body-question {
   display: -webkit-box;
@@ -1937,8 +1939,11 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 4px 10px;
-  font-size: 7px;
+  font-size: 10px;
   font-weight: 400;
   color: #000000;
   border-bottom: solid 1px #000000;
@@ -1953,6 +1958,60 @@ img {
   .faq__body-question {
     font-size: 20px;
     padding: 10px 29px;
+  }
+}
+.faq__body-question.no-border {
+  border-bottom: none;
+}
+.faq__body-question-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.faq__body-question-btn.is-open .faq__body-question-icon {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.faq__body-answer {
+  max-height: 0;
+  overflow: hidden;
+  font-size: 10px;
+  color: #000000;
+  padding: 0 10px;
+  -webkit-transition: max-height 0.3s ease, padding 0.3s ease;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+.faq__body-answer.is-open {
+  max-height: 200px;
+  padding: 10px;
+  padding-bottom: 30px;
+  border-bottom: solid 1px #000000;
+}
+.faq__body-answer:last-of-type.is-open {
+  border-bottom: none;
+}
+@media screen and (min-width: 1024px) {
+  .faq__body-answer {
+    font-size: 14px;
+    padding: 0 22px;
+  }
+  .faq__body-answer.is-open {
+    padding: 10px 22px;
+    padding-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .faq__body-answer {
+    font-size: 20px;
+    padding: 0 29px;
+  }
+  .faq__body-answer.is-open {
+    padding: 10px 29px;
+    padding-bottom: 50px;
   }
 }
 
@@ -2293,7 +2352,7 @@ img {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1023px) {
   .footer__logo::before {
     display: none;
   }
@@ -2836,9 +2895,9 @@ img {
   content: "";
   position: absolute;
   width: 1px;
-  height: 25px;
+  height: 22px;
   background-color: #ffffff;
-  top: -15%;
+  top: -2%;
   left: 53.5%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);

@@ -95,20 +95,17 @@
       border-radius: 20px;
     }
 
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $desktop) {
       max-width: 984px;
     }
-  }
-
-  &-list :last-child {
-    border-bottom: none;
   }
 
   &-question {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 4px 10px;
-    font-size: 7px;
+    font-size: 10px;
     font-weight: 400;
     color: $text;
     border-bottom: solid 1px #000000;
@@ -122,9 +119,62 @@
       font-size: 20px;
       padding: 10px 29px;
     }
+
+    &.no-border {
+      border-bottom: none;
+    }
   }
 
-  
+  &-question-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &.is-open .faq__body-question-icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &-answer {
+    max-height: 0;
+    overflow: hidden;
+    font-size: 10px;
+    color: $text;
+    padding: 0 10px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+
+    &.is-open {
+      max-height: 200px;
+      padding: 10px;
+      padding-bottom: 30px;
+      border-bottom: solid 1px #000000;
+    }
+
+    &:last-of-type.is-open {
+      border-bottom: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+      font-size: 14px;
+      padding: 0 22px;
+
+      &.is-open {
+        padding: 10px 22px;
+        padding-bottom: 30px;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 20px;
+      padding: 0 29px;
+
+      &.is-open {
+        padding: 10px 29px;
+        padding-bottom: 50px;
+      }
+    }
+  }
 }
 
 .faq__body-support {

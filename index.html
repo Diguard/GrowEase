@@ -89,20 +89,6 @@
           Button
         </button>
 
-        <button
-          type="button"
-          class="menu-button is-open"
-          aria-expanded="false"
-          aria-controls="menu-container"
-          data-menu-button
-        >
-          <svg class="menu-icon">
-            <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
-            <use class="icon-cross" href="./images/sprite.svg#icon-cross"></use>
-          </svg>
-    
-        </button>
-
         <div
           class="menu-container no-scroll"
           id="menu-container"
@@ -184,6 +170,25 @@
             </ul>
           </div>
         </div>
+        <button
+          type="button"
+          class="menu-button is-open"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg class="menu-icon">
+            <use
+              class="icon-menu"
+              href="./images/sprite.svg#icon-menu"
+            ></use>
+            <use
+              class="icon-cross"
+              href="./images/sprite.svg#icon-cross"
+            ></use>
+          </svg>
+          Menu
+        </button>
       </div>
     </header>
 
@@ -758,43 +763,106 @@
           >
             <li class="faq__body-question">
               Can I try GrowEase for free?
-              <button class="faq__body-question-btn">
+              <button
+                class="faq__body-question-btn"
+                aria-expanded="false"
+                aria-controls="answer-1"
+              >
                 <svg class="faq__body-question-icon">
                   <use href="./images/sprite.svg#icon-chevron-down"></use>
                 </svg>
               </button>
             </li>
+            <li
+              class="faq__body-answer"
+              id="answer-1"
+            >
+              Yes, GrowEase offers a 14-day free trial for all plans, allowing
+              you to explore its features without any cost. No credit card
+              required to start.
+            </li>
+
             <li class="faq__body-question">
               What makes GrowEase different from other platforms?
-              <button class="faq__body-question-btn">
+              <button
+                class="faq__body-question-btn"
+                aria-expanded="false"
+                aria-controls="answer-2"
+              >
                 <svg class="faq__body-question-icon">
                   <use href="./images/sprite.svg#icon-chevron-down"></use>
                 </svg>
               </button>
             </li>
+            <li
+              class="faq__body-answer"
+              id="answer-2"
+            >
+              GrowEase combines AI-driven lead generation, seamless social media
+              management, and an all-in-one CRM to boost efficiency, with
+              campaigns launched in just 5 minutes.
+            </li>
+
             <li class="faq__body-question">
               Do I need technical skills to use GrowEase?
-              <button class="faq__body-question-btn">
+              <button
+                class="faq__body-question-btn"
+                aria-expanded="false"
+                aria-controls="answer-3"
+              >
                 <svg class="faq__body-question-icon">
                   <use href="./images/sprite.svg#icon-chevron-down"></use>
                 </svg>
               </button>
             </li>
+            <li
+              class="faq__body-answer"
+              id="answer-3"
+            >
+              No, GrowEase is designed for ease of use with a simple interface.
+              No coding or technical skills are needed to set up campaigns or
+              manage your account.
+            </li>
+
             <li class="faq__body-question">
               Is my data secure with GrowEase?
-              <button class="faq__body-question-btn">
+              <button
+                class="faq__body-question-btn"
+                aria-expanded="false"
+                aria-controls="answer-4"
+              >
                 <svg class="faq__body-question-icon">
                   <use href="./images/sprite.svg#icon-chevron-down"></use>
                 </svg>
               </button>
             </li>
+            <li
+              class="faq__body-answer"
+              id="answer-4"
+            >
+              Yes, GrowEase uses 128-bit SSL encryption and follows GDPR
+              guidelines to ensure your data is securely stored and protected.
+            </li>
+
             <li class="faq__body-question">
               Can I cancel my plan anytime?
-              <button class="faq__body-question-btn">
+              <button
+                class="faq__body-question-btn"
+                aria-expanded="false"
+                aria-controls="answer-5"
+              >
                 <svg class="faq__body-question-icon">
                   <use href="./images/sprite.svg#icon-chevron-down"></use>
                 </svg>
               </button>
+            </li>
+            <li
+              class="faq__body-answer"
+              id="answer-5"
+            >
+              Yes, you can cancel your GrowEase plan at any time with no hidden
+              fees. Simply contact support or manage your subscription in the
+              app.
             </li>
           </ul>
 
@@ -1113,5 +1181,6 @@
     </footer>
 
     <script src="./js/mobile-menu.js"></script>
+    <script src="./js/answers.js"></script>
   </body>
 </html>

@@ -1,4 +1,6 @@
 .reviews-section {
+  display: flex;
+  justify-content: center;
   padding: 50px 0;
   background-color: #f8faff;
 
@@ -15,11 +17,9 @@
 .reviews {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 60px;
   padding: 0 54px;
-  margin: 0 auto;
 
   @media screen and (min-width: $mobile) {
     width: $mobile;

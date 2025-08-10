@@ -1,14 +1,14 @@
 .definition-section {
   background-color: $primary;
+  display: flex;
+  justify-content: center;
 }
 
 .definition {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 30px 30px;
-  margin: 0 auto;
 
   @media screen and (min-width: $mobile) {
     width: $mobile;

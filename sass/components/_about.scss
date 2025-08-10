@@ -23,9 +23,7 @@
 
 .about__image {
   max-width: 276px;
-  // @media screen and (min-width: $mobile) {
-  //   max-width: 375px;
-  // }
+
   @media screen and (min-width: $tablet) {
     max-width: 688px;
   }

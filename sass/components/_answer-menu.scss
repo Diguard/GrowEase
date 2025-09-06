@@ -1,0 +1,40 @@
+.faq__body {
+    &-question-btn {
+    width: 10px;
+    height: 10px;
+
+    border: 0;
+    padding: 0;
+    margin: 0;
+
+    background-color: $background;
+
+    cursor: pointer;
+
+    @media screen and (min-width: $tablet) {
+      width: 17px;
+      height: 17px;
+    }
+
+     @media screen and (min-width: $desktop) {
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  &-question-icon {
+    width: 10px;
+    height: 10px;
+    fill: currentColor;
+
+    @media screen and (min-width: $tablet) {
+      width: 17px;
+      height: 17px;
+    }
+
+     @media screen and (min-width: $desktop) {
+      width: 23px;
+      height: 23px;
+    }
+  }
+}

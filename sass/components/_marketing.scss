@@ -1,0 +1,495 @@
+.marketing-section {
+  display: flex;
+  justify-content: center;
+  background-color: $primary;
+
+  padding: 50px 0;
+
+  @media screen and (min-width: $tablet) {
+    padding: 63px 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 100px 0;
+  }
+}
+
+.marketing {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding: 0 42px;
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 71px;
+
+    width: $tablet;
+    padding: 0 123px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+
+    padding: 0 155px;
+    gap: 100px;
+  }
+}
+
+.marketing__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    gap: 12px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    gap: 17px;
+  }
+
+  &-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: $secondary;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 36px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 48px;
+    }
+  }
+
+  &-text {
+    font-size: 12px;
+    font-weight: 400;
+    color: $secondary;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 20px;
+      width: 744px;
+    }
+  }
+}
+
+.marketing__price-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 37px;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 58px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    gap: 80px;
+    width: 984px;
+  }
+}
+
+.marketing__card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 43px;
+
+  width: 100%;
+  max-width: 207px;
+  min-height: 310px;
+
+  background-color: $secondary;
+  border-radius: 18px;
+
+  padding: 30px 0;
+
+  box-shadow: inset 4px 4px 7px rgba(28, 117, 255, 0.3);
+
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  @media screen and (min-width: $tablet) {
+    max-width: 231px;
+    height: 346px;
+    padding: 42px 0px;
+    gap: 37px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 320px;
+    height: 478px;
+    padding: 65px 0px;
+    gap: 65px;
+  }
+
+  .marketing__card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding-left: 33px;
+
+    @media screen and (min-width: $tablet) {
+      padding-left: 37px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-left: 51px;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: $text;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 21px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 30px;
+    }
+  }
+
+  &-subtitle {
+    font-size: 11px;
+    font-weight: 500;
+    color: $text;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 12px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+
+    @media screen and (min-width: $tablet) {
+      gap: 14px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      gap: 20px;
+    }
+  }
+
+  &-icon {
+    width: 14px;
+    height: 14px;
+
+    @media screen and (min-width: $tablet) {
+      width: 16px;
+      height: 16px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &-icon-price {
+    width: 19px;
+    height: 19px;
+    fill: #999999;
+
+    @media screen and (min-width: $tablet) {
+      width: 22px;
+      height: 22px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 11px;
+    font-weight: 500;
+    color: $text;
+
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba($primary, 0.1);
+    }
+
+    @media screen and (min-width: $tablet) {
+      font-size: 12px;
+      gap: 10px;
+    }
+  }
+
+  &-price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 15px;
+    font-weight: 400;
+    color: #999999;
+
+    margin-top: 10px;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 16px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 24px;
+      gap: 10px;
+    }
+  }
+
+  &-marker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 3%;
+    left: 72%;
+
+    width: 70px;
+    height: 19px;
+
+    background: linear-gradient(90deg, #a3c5ef, #007bff);
+    box-shadow: -3px 3px 6px rgba(0, 0, 0, 0.34);
+    border-radius: 3px;
+    font-size: 7px;
+    font-weight: 700;
+    color: $secondary;
+
+    @media screen and (min-width: $tablet) {
+      width: 113px;
+      height: 30px;
+      font-size: 12px;
+
+      position: absolute;
+      top: 2%;
+      left: 58%;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 156px;
+      height: 41px;
+      font-size: 16px;
+
+      position: absolute;
+      top: 3%;
+      left: 57%;
+    }
+  }
+
+  .marketing__card-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-button {
+    width: 119px;
+    height: 36px;
+
+    border: 0;
+    padding: 0;
+    margin: 0;
+
+    background-color: $primary;
+    border-radius: 18px;
+
+    font-size: 13px;
+    font-weight: 700;
+    color: $secondary;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+      transform: scale(1.05);
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: 133px;
+      height: 40px;
+      font-size: 14px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 166px;
+      height: 50px;
+      font-size: 16px;
+      border-radius: 20px;
+    }
+  }
+}
+
+.marketing__table {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media screen and (min-width: $tablet) {
+    gap: 29px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    gap: 40px;
+  }
+
+  &-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: $secondary;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 24px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 32px;
+      gap: 40px;
+    }
+  }
+
+  &-container {
+    max-width: 290px;
+    overflow: auto;
+    border-radius: 10px;
+    border: 1px solid #b9b9b9;
+
+    box-shadow: 8px 7px 12px rgba(0, 0, 0, 0.2);
+
+    @media screen and (min-width: $tablet) {
+      max-width: 780px;
+      border-radius: 20px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: 1113px;
+    }
+  }
+
+  &-container table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  &-container th {
+    padding: 4px;
+    text-align: left;
+    font-size: 6px;
+    font-weight: 700;
+    color: $text;
+    border: 1px solid #b9b9b9;
+    background-color: #f8faff;
+    border-top: none;
+    border-left: none;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 12px;
+      padding: 10px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 16px;
+      padding: 15px;
+    }
+  }
+
+  &-container td {
+    padding: 4px;
+    text-align: left;
+    font-size: 5px;
+    font-weight: 400;
+    color: $text;
+    border: 1px solid #b9b9b9;
+    background-color: $secondary;
+    border-bottom: none;
+    border-left: none;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 12px;
+      padding: 10px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 16px;
+      padding: 15px;
+    }
+  }
+
+  &-container th:nth-child(1) {
+    width: auto;
+
+    @media screen and (min-width: $tablet) {
+      width: 386px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 563px;
+    }
+  }
+
+  &-container th:nth-child(n + 2) {
+    width: 36px;
+
+    @media screen and (min-width: $tablet) {
+      width: 98px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 142px;
+    }
+  }
+
+  &-container th:last-child {
+    border-right: none;
+  }
+
+  &-container td:last-child {
+    border-right: none;
+  }
+}

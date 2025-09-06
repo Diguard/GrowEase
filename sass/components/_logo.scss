@@ -1,0 +1,68 @@
+.logo {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100px;
+  height: 20px;
+
+  background-color: $secondary;
+  border-radius: 16px;
+  text-align: center;
+
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: darken($secondary, 1%);
+      transform: scale(1.05);
+    }
+
+  @media screen and (min-width: $tablet) {
+    width: 116px;
+    height: 24px;
+
+    border-radius: 18px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 164px;
+    height: 33px;
+
+    border-radius: 26px;
+  }
+}
+
+.logo__text {
+  color: $primary;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 12px;
+  text-decoration: none;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 21px;
+  }
+}
+
+.logo__icon {
+  width: 13px;
+  height: 15px;
+  fill: currentColor;
+
+  margin-left: 6px;
+
+  @media screen and (min-width: $tablet) {
+    width: 15px;
+    height: 16px;
+  }
+
+   @media screen and (min-width: $desktop) {
+    width: 20px;
+    height: 23px;
+  }
+}

@@ -1,0 +1,191 @@
+.section-intro {
+  background-color: $background;
+  display: flex;
+  justify-content: center;
+}
+
+.intro__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  padding: 30px 21px;
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: row;
+    width: $tablet;
+
+    gap: 45px;
+    padding: 50px 66px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+    padding: 82px 94px;
+  }
+}
+
+.intro__content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  @media screen and (min-width: $tablet) {
+    align-items: flex-start;
+  }
+}
+
+.intro__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.intro__content-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  width: 100%;
+  max-width: 300px;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    gap: 13px;
+  }
+}
+
+.intro__title {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    font-weight: 800;
+    text-align: start;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+  }
+}
+
+.intro__subtitle {
+  color: $text;
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.8;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 36px;
+    text-align: start;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 48px;
+  }
+}
+
+.intro__text {
+  font-size: 12px;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    text-align: start;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 580px;
+    font-size: 16px;
+  }
+}
+
+.intro__text-btn {
+  font-size: 12px;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    text-align: start;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 330px;
+    font-size: 14px;
+  }
+}
+
+.intro__button {
+  width: 117px;
+  height: 32px;
+
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  background-color: $primary;
+  border-radius: 20px;
+
+  color: $secondary;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: darken($primary, 10%);
+    transform: scale(1.05);
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 161px;
+    height: 49px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 186px;
+    height: 56px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+.intro__img {
+  width: min(100%, 269px);
+  height: auto;
+  display: block;
+  border-radius: 15px;
+
+  @media screen and (min-width: $tablet) {
+    width: min(100%, 367px);
+    border-radius: 20px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: min(100%, 516px);
+  }
+}

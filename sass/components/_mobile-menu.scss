@@ -1,0 +1,144 @@
+// No-csroll mobile-menu
+.no-scroll {
+  overflow-y: hidden;
+}
+
+// Mobile Menu Button
+.menu-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  z-index: 999;
+
+  width: 22px;
+  height: 22px;
+
+  padding: 0;
+  margin: 0;
+  border: 0;
+
+  background-color: $primary;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  color: $secondary;
+  cursor: pointer;
+
+  appearance: none;
+
+  & .icon-menu {
+    display: none;
+  }
+
+  &.is-open .icon-menu {
+    display: block;
+  }
+
+  &.is-open .icon-cross {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.menu-icon {
+  width: 22px;
+  height: 22px;
+  fill: $secondary;
+}
+
+// Mobile Menu Container
+.menu-container {
+  padding: 60px 0;
+
+  z-index: 1;
+
+  background-color: $primary;
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    &.is-open {
+      @include flex-column;
+      height: 100vh;
+      justify-content: space-between;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+// Mobile Navigation
+.mobile-navigation {
+  @include flex-column;
+  gap: 50px;
+
+  &__list {
+    @include flex-column;
+    gap: 25px;
+  }
+
+  &__link {
+    color: $secondary;
+    list-style: none;
+    font-weight: 500;
+    font-size: 30px;
+    text-decoration: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+// Mobile Social Links
+.mobile-menu__socials {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  @media screen and (min-width: 376px) and (max-width: 1023px) {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.2s ease;
+    }
+  }
+
+  &-icon {
+    width: 20px;
+    height: 20px;
+    fill: $secondary;
+  }
+
+  &-link {
+    font-size: 12px;
+    color: $secondary;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

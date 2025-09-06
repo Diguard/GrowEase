@@ -1,0 +1,276 @@
+.modal {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  width: 90%;
+  max-width: 375px;
+  height: auto;
+  border-radius: 4px;
+  background-color: $primary;
+  box-shadow: 4px 4px 6px -2px rgba(0, 0, 0, 0.7);
+
+  @media screen and (min-width: $tablet) {
+    top: 65%;
+  }
+
+  @media screen and (min-width: $desktop) {
+    top: 50%;
+    width: 100%;
+    max-width: 528px;
+    max-height: auto;
+  }
+}
+
+.form {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+
+  @include flex-column;
+
+  width: 100%;
+
+  padding: 50px 20px;
+  row-gap: 10px;
+
+  background-color: $secondary;
+  border-radius: 10px;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+
+    width: 100%;
+    max-width: 450px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: $text;
+    letter-spacing: 0.03em;
+  }
+
+  &__label {
+    font-size: 12px;
+    color: $text;
+    letter-spacing: 0.01em;
+  }
+
+  &__link {
+    color: $accent;
+  }
+
+  &__textarea {
+    resize: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    top: 65%;
+  }
+
+  @media screen and (min-width: $desktop) {
+    top: 50%;
+    width: 528px;
+    height: auto;
+  }
+}
+
+.form__label--comment {
+  font-size: 12px;
+  color: $text;
+  letter-spacing: 0.01em;
+}
+
+.form__input {
+  width: 100%;
+  max-width: 450px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+  cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border-color: $primary;
+    outline: none;
+    fill: $primary;
+  }
+  &:focus + .form__icon {
+    fill: $primary;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 448px;
+  }
+}
+
+.form__textarea {
+  padding: 12px 16px;
+  width: 100%;
+  max-width: 450x;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    border-color: $accent;
+    outline: none;
+  }
+
+  &::placeholder {
+    font-size: 12px;
+    color: rgba(117, 117, 117, 0.5);
+    letter-spacing: 0.01em;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 448px;
+  }
+}
+
+.form__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    fill: $primary;
+  }
+}
+
+.form__checkbox {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.form__checkbox-input {
+  appearance: none;
+  position: absolute;
+}
+
+.form__label-checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: $text;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  line-height: 1.2;
+  gap: 7px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+  }
+}
+
+.form__checkbox-icon {
+  @include flex-center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #cecbcb;
+  fill: transparent;
+  margin-top: -1px;
+}
+
+.form__checkbox-input:checked + .form__checkbox-icon {
+  border-color: $secondary;
+  background-color: $secondary;
+  background-origin: border-box;
+  fill: $primary;
+}
+
+.form__button {
+  @include flex-center;
+
+  width: 117px;
+  height: 32px;
+
+  border-radius: 20px;
+  border: none;
+  padding: 0;
+
+  background-color: $primary;
+  color: $secondary;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: darken($primary, 10%);
+    transform: scale(1.05);
+  }
+}
+
+.form__close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  @include flex-center;
+  width: 30px;
+  height: 30px;
+  background-color: $secondary;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.form__close-icon {
+  display: flex;
+  width: 18px;
+  height: 18px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    fill: $primary;
+  }
+}
+
+// Backdrop
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(47, 48, 58, 0.5);
+
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  overflow-y: scroll;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.1);
+}

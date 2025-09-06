@@ -38,7 +38,7 @@
     />
   </head>
 
-  <body>
+  <body data-body>
     <!-- Header section -->
     <header class="header">
       <div class="header__container">
@@ -219,7 +219,10 @@
             </p>
           </div>
 
-          <div class="intro__content-btn">
+          <div
+            class="intro__content-btn"
+            data-modal-open
+          >
             <button
               type="button"
               class="intro__button"
@@ -230,6 +233,94 @@
               Try GrowEase premium for a powerful business boost, or start free
               with our essential tools
             </p>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div
+          class="backdrop is-hidden"
+          data-modal
+        >
+          <div class="modal show">
+            <!-- Form -->
+            <form
+              class="form"
+              autocomplete="off"
+            >
+              <div class="form__title">
+                <h2>Leave your details, we will call you back</h2>
+              </div>
+
+              <div class="form__field">
+                <label
+                  class="form__label"
+                  for="name"
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  class="form__input"
+                  name="name"
+                  id="name"
+                />
+                <svg class="form__icon">
+                  <use href="./images/sprite.svg#icon-person-black"></use>
+                </svg>
+              </div>
+
+              <div class="form__field">
+                <label
+                  class="form__label"
+                  for="tel"
+                >
+                  Phone
+                </label>
+                <input
+                  type="tel"
+                  class="form__input"
+                  name="tel"
+                  id="tel"
+                />
+                <svg class="form__icon">
+                  <use href="./images/sprite.svg#icon-phone-black"></use>
+                </svg>
+              </div>
+
+              <div class="form__checkbox">
+                <label
+                  class="form__label-checkbox"
+                  for="agreement"
+                >
+                  <input
+                    class="form__checkbox-input"
+                    type="checkbox"
+                    name="agreement"
+                    id="agreement"
+                  />
+                  <svg class="form__checkbox-icon">
+                    <use href="./images/sprite.svg#icon-check"></use>
+                  </svg>
+                  I agree to the newsletter and accept
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                class="form__button"
+              >
+                Send
+              </button>
+
+              <button
+                type="button"
+                class="form__close-button"
+                data-modal-close
+              >
+                <svg class="form__close-icon">
+                  <use href="./images/sprite.svg#icon-cross"></use>
+                </svg>
+              </button>
+            </form>
           </div>
         </div>
 
@@ -1267,6 +1358,7 @@
     </footer>
 
     <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
     <script src="./js/answers.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

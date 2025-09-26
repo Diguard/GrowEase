@@ -1,0 +1,95 @@
+.header {
+  background-color: $primary;
+}
+
+.header__container {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  height: 50px;
+  padding: 0 20px;
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+    height: 80px;
+    padding: 0 69px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+    height: 90px;
+    padding: 0 91px;
+  }
+}
+
+.nav {
+  &__list {
+    display: inline-flex;
+    gap: 35px;
+  }
+
+  &__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: $secondary;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+      transition: transform 0.3s ease;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.header__button {
+  width: 133px;
+  height: 40px;
+
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  background-color: $accent;
+  border-radius: 20px;
+
+  color: $secondary;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+
+  appearance: none;
+
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: lighten($accent, 10%);
+    transform: scale(1.05);
+  }
+
+  @media screen and (max-width: 1023px) {
+    display: none;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 166px;
+    height: 50px;
+    font-size: 16px;
+  }
+}

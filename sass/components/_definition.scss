@@ -1,0 +1,249 @@
+.definition-section {
+  background-color: $primary;
+  display: flex;
+  justify-content: center;
+}
+
+.definition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 30px;
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+    padding: 61px 106px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+    padding: 89px 150px;
+  }
+
+  &__title {
+    max-width: 285px;
+    color: $secondary;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+      max-width: none;
+      font-weight: 700;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 16px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 11px;
+
+    padding-top: 30px;
+    padding-bottom: 25px;
+
+    @media screen and (min-width: $tablet) {
+      gap: 20px;
+      padding-top: 14px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      gap: 25px;
+      padding-top: 20px;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: $secondary;
+
+    @media screen and (min-width: $tablet) {
+      width: 26px;
+      height: 26px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 37px;
+      height: 37px;
+    }
+  }
+
+  &__image {
+    border-radius: 15px;
+
+    @media screen and (min-width: $tablet) {
+      border-radius: 22px;
+      max-width: 377px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      border-radius: 20px;
+      max-width: 531px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    padding: 40px 0px;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-direction: row;
+      gap: 55px;
+      padding: 0;
+      margin-top: 60px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      gap: 78px;
+      margin-top: 95px;
+    }
+  }
+
+  &__content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    @media screen and (min-width: $desktop) {
+      gap: 65px;
+    }
+  }
+
+  &__subtitle {
+    color: $secondary;
+    font-size: 30px;
+    font-weight: 700;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 36px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 48px;
+    }
+  }
+
+  &__text {
+    color: $secondary;
+    font-size: 12px;
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+      text-align: start;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 16px;
+    }
+  }
+}
+
+.definition__btn {
+  display: flex;
+  gap: 11px;
+
+  &-demo {
+    width: 109px;
+    height: 32px;
+
+    border: 0;
+    margin: 0;
+    padding: 0;
+
+    background-color: $secondary;
+    border-radius: 20px;
+
+    color: $primary;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: 132px;
+      height: 40px;
+      border-radius: 4px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 186px;
+      height: 56px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 20px;
+    }
+  }
+
+  &-start {
+    width: 116px;
+    height: 32px;
+
+    border: 0;
+    margin: 0;
+    padding: 0;
+
+    background-color: $accent;
+    border-radius: 20px;
+
+    color: $secondary;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+
+    &:hover,
+    &:focus {
+      background-color: lighten($accent, 10%);
+      transform: scale(1.05);
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: 132px;
+      height: 40px;
+      border-radius: 4px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 186px;
+      height: 56px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    gap: 15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    gap: 21px;
+  }
+}

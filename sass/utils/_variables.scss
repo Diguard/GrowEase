@@ -1,0 +1,27 @@
+// font
+$font-main: "Work Sans", sans-serif;
+
+// color
+$primary: #007bff;
+$secondary: #ffffff;
+$accent: #f39c12;
+$background: #f4f4f4;
+$text: #000000;
+
+// mixin
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// adaptive
+$mobile: 375px;
+$tablet: 1024px;
+$desktop: 1440px;

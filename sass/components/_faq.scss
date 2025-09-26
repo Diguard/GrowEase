@@ -1,0 +1,372 @@
+.faq-section {
+  display: flex;
+  justify-content: center;
+  background-color: $background;
+  padding: 50px 0;
+
+  @media screen and (min-width: $desktop) {
+    padding: 85px 0;
+  }
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  padding: 0 20px;
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+    gap: 99px;
+    padding: 0 133px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+    gap: 126px;
+    padding: 0 210px;
+  }
+}
+
+.faq__body {
+  @include flex-column;
+  gap: 20px;
+
+  @media screen and (min-width: $tablet) {
+    gap: 49px;
+  }
+
+  &-head {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @media screen and (min-width: $tablet) {
+      gap: 20px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      gap: 26px;
+    }
+  }
+
+  &-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: $text;
+    text-align: center;
+    line-height: 1.5;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 36px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 48px;
+    }
+  }
+
+  &-text {
+    font-size: 12px;
+    font-weight: 400;
+    color: $text;
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 14px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 20px;
+    }
+  }
+
+  &-list {
+    width: 100%;
+    max-width: 333px;
+    border: solid 1px #000000;
+    border-radius: 10px;
+
+    @media screen and (min-width: $tablet) {
+      max-width: 728px;
+      border-radius: 20px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: 984px;
+    }
+  }
+
+  &-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 10px;
+    font-size: 10px;
+    font-weight: 400;
+    color: $text;
+    border-bottom: solid 1px #000000;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 14px;
+      padding: 8px 22px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 20px;
+      padding: 10px 29px;
+    }
+
+    &.no-border {
+      border-bottom: none;
+    }
+  }
+
+  &-question-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &.is-open .faq__body-question-icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &-answer {
+    max-height: 0;
+    overflow: hidden;
+    font-size: 10px;
+    color: $text;
+    padding: 0 10px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+
+    &.is-open {
+      max-height: 200px;
+      padding: 10px;
+      padding-bottom: 30px;
+      border-bottom: solid 1px #000000;
+    }
+
+    &:last-of-type.is-open {
+      border-bottom: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+      font-size: 14px;
+      padding: 0 22px;
+
+      &.is-open {
+        padding: 10px 22px;
+        padding-bottom: 30px;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 20px;
+      padding: 0 29px;
+
+      &.is-open {
+        padding: 10px 29px;
+        padding-bottom: 50px;
+      }
+    }
+  }
+}
+
+.faq__body-support {
+  @include flex-column;
+  gap: 20px;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    gap: 34px;
+  }
+
+  &-subtitle {
+    font-size: 12px;
+    font-weight: 700;
+    color: $text;
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 16px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 24px;
+    }
+  }
+
+  &-button {
+    width: 95px;
+    height: 32px;
+
+    border: 0;
+    padding: 0;
+    margin: 0;
+
+    background-color: $primary;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 700;
+    color: $secondary;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+      transform: scale(1.05);
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: 133px;
+      height: 40px;
+      font-size: 14px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 151px;
+      height: 50px;
+      font-size: 16px;
+    }
+  }
+}
+
+.faq__footer {
+  @include flex-column;
+  gap: 8px;
+
+  @media screen and (min-width: $tablet) {
+    gap: 15px;
+  }
+
+  &-title {
+    font-size: 30px;
+    font-weight: 800;
+    color: $text;
+    text-align: center;
+    line-height: 1.5;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 35px;
+      font-weight: 700;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 48px;
+    }
+  }
+
+  &-text {
+    font-size: 12px;
+    font-weight: 400;
+    color: $text;
+    text-align: center;
+    margin-bottom: 26px;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 16px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 20px;
+    }
+  }
+
+  &-actions {
+    display: flex;
+    gap: 8px;
+
+    @media screen and (min-width: $tablet) {
+      gap: 11px;
+    }
+  }
+
+  &-button-get {
+    width: 159px;
+    height: 32px;
+
+    border: 0;
+    padding: 0;
+    margin: 0;
+
+    background-color: $primary;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+    color: $secondary;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+      transform: scale(1.05);
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: 192px;
+      height: 40px;
+      font-size: 14px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 230px;
+      height: 50px;
+      font-size: 16px;
+    }
+  }
+
+  &-button-talk {
+    width: 136px;
+    height: 32px;
+
+    border: solid 1px $primary;
+    padding: 0;
+    margin: 0;
+
+    background-color: $background;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+    color: $primary;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: darken($background, 5%);
+      transform: scale(1.05);
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: 169px;
+      height: 40px;
+      font-size: 14px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 209px;
+      height: 50px;
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+}

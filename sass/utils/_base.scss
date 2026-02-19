@@ -6,6 +6,9 @@ body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.2;
 
+  margin: 0;
+  padding-top: 60px;
+
   &.no-scroll {
     overflow: hidden;
   }

@@ -12,16 +12,12 @@ body {
   &.no-scroll {
     overflow: hidden;
   }
-}
 
-@media screen and (min-width: 768px) {
-  body {
+  @media screen and (min-width: $tablet) {
     padding-top: 80px;
   }
-}
 
-@media screen and (min-width: 1200px) {
-  body {
+  @media screen and (min-width: $desktop) {
     padding-top: 90px;
   }
 }

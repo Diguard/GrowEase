@@ -45,3 +45,17 @@ img {
   width: 100%;
   height: auto;
 }
+
+[id] {
+  scroll-margin-top: 70px;
+}
+@media screen and (min-width: $tablet) {
+  [id] {
+    scroll-margin-top: 90px;
+  }
+}
+@media screen and (min-width: $desktop) {
+  [id] {
+    scroll-margin-top: 100px;
+  }
+}

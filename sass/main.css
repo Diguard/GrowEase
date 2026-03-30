@@ -42,6 +42,10 @@ img {
   height: auto;
 }
 
+[id] {
+  scroll-margin-top: 70px;
+}
+
 .logo {
   display: inline-flex;
   justify-content: center;

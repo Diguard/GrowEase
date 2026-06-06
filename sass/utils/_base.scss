@@ -43,15 +43,10 @@ img {
 }
 
 [id] {
-  scroll-margin-top: 70px;
+  scroll-margin-top: 60px;
 }
-@media screen and (min-width: $tablet) {
+@media screen and (min-width: $tablet) and (min-width: $desktop) {
   [id] {
-    scroll-margin-top: 90px;
-  }
-}
-@media screen and (min-width: $desktop) {
-  [id] {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 87px;
   }
 }

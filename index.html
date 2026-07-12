@@ -269,20 +269,17 @@
         </ul>
 
         <div class="definition__content">
-          <img
-            loading="lazy"
-            srcset="
-              ./images/video-277.jpg 277w,
-              ./images/video-377.jpg 377w,
-              ./images/video-531.jpg 531w
-            "
-            sizes="(max-width: 375px) 277px,
-            (min-width: 768px) and (max-width: 1439px) 377px,
-            (min-width: 1440px) 531px"
-            src="./images/video-277.jpg"
-            alt="video"
-            class="definition__image"
-          />
+          <video
+            class="definition__video"
+            autoplay
+            muted
+            loop
+            playsinline
+            poster="./images/video-531.jpg"
+          >
+            <source src="./video/GrowEase.mp4" type="video/mp4" />
+            Your browser does not support video
+          </video>
 
           <div class="definition__content-box">
             <h3 class="definition__subtitle">What is GrowEase?</h3>

@@ -247,3 +247,23 @@
     gap: 21px;
   }
 }
+
+.definition__video {
+  width: 275px;
+  height: 185px;
+  object-fit: cover;
+  display: block;
+  border-radius: 14px;
+
+  @media (min-width: 768px) {
+    width: 377px;
+    height: 253px;
+    border-radius: 20px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 530px;
+    height: 356px;
+    border-radius: 20px;
+  }
+}

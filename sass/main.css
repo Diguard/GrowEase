@@ -1089,6 +1089,29 @@ img {
   }
 }
 
+.definition__video {
+  width: 275px;
+  height: 185px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  border-radius: 14px;
+}
+@media (min-width: 768px) {
+  .definition__video {
+    width: 377px;
+    height: 253px;
+    border-radius: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .definition__video {
+    width: 530px;
+    height: 356px;
+    border-radius: 20px;
+  }
+}
+
 .about-section {
   padding: 30px 50px;
   background-color: #f4f4f4;

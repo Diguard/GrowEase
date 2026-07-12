@@ -1092,6 +1092,7 @@ img {
 .definition__video {
   width: 275px;
   height: 185px;
+  max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;

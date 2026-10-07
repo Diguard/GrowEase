@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./sass/main.css" />
   </head>
 
-  <body data-body id="home">
+  <body data-body>
     <!-- Header section -->
 
     <header class="header">
@@ -34,9 +34,6 @@
 
         <nav class="nav">
           <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#home" class="nav__link">Home</a>
-            </li>
             <li class="nav__item">
               <a href="#features" class="nav__link">Features</a>
             </li>
@@ -54,9 +51,6 @@
         <div class="menu-container no-scroll" id="menu-container" data-menu>
           <div class="mobile-navigation">
             <ul class="mobile-navigation__list">
-              <li class="mobile-navigation__item">
-                <a href="#home" class="mobile-navigation__link">Home</a>
-              </li>
               <li class="mobile-navigation__item">
                 <a href="#features" class="mobile-navigation__link">Features</a>
               </li>
@@ -1053,6 +1047,17 @@
     <script src="./js/smooth-scroll.js" type="module"></script>
     <script src="./js/modal.js" type="module"></script>
     <script src="./js/answers.js" type="module"></script>
-    <script src="./js/getstart.js" type="module"></script>
+    <script src="./js/back-to-top.js" type="module"></script>
+
+    <button
+      type="button"
+      class="back-to-top"
+      id="backToTop"
+      aria-label="Return to the top of the page"
+    >
+      <svg class="definition__icon">
+        <use href="./images/sprite.svg#icon-back-to-top"></use>
+      </svg>
+    </button>
   </body>
 </html>

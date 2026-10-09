@@ -2155,6 +2155,7 @@ img {
   font-weight: 400;
   color: #000000;
   border-bottom: solid 1px #000000;
+  cursor: pointer;
 }
 @media screen and (min-width: 1024px) {
   .faq__body-question {
@@ -2170,6 +2171,9 @@ img {
 }
 .faq__body-question.no-border {
   border-bottom: none;
+}
+.faq__body-question:hover {
+  font-weight: 700;
 }
 .faq__body-question-btn {
   background: none;

@@ -1,5 +1,5 @@
 .faq__body {
-    &-question-btn {
+  &-question-btn {
     width: 10px;
     height: 10px;
 
@@ -16,7 +16,7 @@
       height: 17px;
     }
 
-     @media screen and (min-width: $desktop) {
+    @media screen and (min-width: $desktop) {
       width: 23px;
       height: 23px;
     }
@@ -32,7 +32,7 @@
       height: 17px;
     }
 
-     @media screen and (min-width: $desktop) {
+    @media screen and (min-width: $desktop) {
       width: 23px;
       height: 23px;
     }

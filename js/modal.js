@@ -1,30 +1,33 @@
 (() => {
   const refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
+    openModalBtns: document.querySelectorAll('[data-modal-open]'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
+    modal: document.querySelector('[data-modal]'),
+    body: document.querySelector('[data-body]'),
   };
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+  if (!refs.modal) return;
+
+  function toggleModal() {
+    refs.modal.classList.toggle('is-hidden');
+    refs.body.classList.toggle('no-scroll');
+  }
+
+  refs.openModalBtns.forEach((btn) => {
+    btn.addEventListener('click', toggleModal);
+  });
+
+  if (refs.closeModalBtn) {
+    refs.closeModalBtn.addEventListener('click', toggleModal);
+  }
+
+  const form = document.querySelector('.form');
+  if (form) {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      alert('Our manager will contact you shortly. Thank you for choosing us.');
+      toggleModal();
+      form.reset();
+    });
+  }
 })();
-
-function toggleModal() {
-  const modal = document.querySelector('[data-modal]');
-  const body = document.querySelector('[data-body]');
-
-  modal.classList.toggle('is-hidden');
-  body.classList.toggle('no-scroll');
-}
-
-const form = document.querySelector('.form');
-
-form.addEventListener('submit', handleSubmit);
-
-function handleSubmit(event) {
-  event.preventDefault();
-
-  alert('Our manager will contact you shortly. Thank you for choosing us.');
-
-  toggleModal();
-  form.reset();
-}

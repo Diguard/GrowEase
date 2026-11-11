@@ -36,7 +36,7 @@
   width: 100%;
 
   padding: 50px 20px;
-  row-gap: 10px;
+  row-gap: 24px;
 
   background-color: $secondary;
   border-radius: 10px;
@@ -45,10 +45,10 @@
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &__field {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 4px;
-    position: relative;
 
     width: 100%;
     max-width: 450px;
@@ -197,7 +197,8 @@
   fill: $primary;
 }
 
-.form__button {
+.form__button,
+button[type="submit"] {
   @include flex-center;
 
   width: 117px;
@@ -217,11 +218,20 @@
   letter-spacing: 0.06em;
   cursor: pointer;
 
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 
   &:hover {
     background-color: darken($primary, 10%);
     transform: scale(1.05);
+  }
+  &:disabled,
+  &.is-disabled &[disabled] {
+    background-color: #cccccc !important;
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
   }
 
   @media screen and (min-width: $tablet) {
@@ -288,4 +298,37 @@
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.1);
+}
+
+// INPUT ERROR
+.error {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+
+  min-height: 24px;
+  padding: 4px 8px;
+
+  font-size: 80%;
+  line-height: 1.2;
+  color: white;
+  overflow-wrap: break-word;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+  box-sizing: border-box;
+  z-index: 10;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+}
+
+.error.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }

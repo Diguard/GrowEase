@@ -134,14 +134,22 @@
         <div class="backdrop is-hidden" data-modal>
           <div class="modal show">
             <!-- Form -->
-            <form class="form" autocomplete="off">
+            <form class="form" autocomplete="off" novalidate>
               <div class="form__title">
                 <h2>Leave your details, we will call you back</h2>
               </div>
 
               <div class="form__field">
                 <label class="form__label" for="name"> Name </label>
-                <input type="text" class="form__input" name="name" id="name" />
+                <input
+                  type="text"
+                  class="form__input"
+                  name="name"
+                  id="name"
+                  required
+                  minlength="3"
+                />
+                <span class="error" aria-live="polite"></span>
                 <svg class="form__icon">
                   <use href="./images/sprite.svg#icon-person-black"></use>
                 </svg>
@@ -149,9 +157,33 @@
 
               <div class="form__field">
                 <label class="form__label" for="tel"> Phone </label>
-                <input type="tel" class="form__input" name="tel" id="tel" />
+                <input
+                  type="tel"
+                  class="form__input"
+                  name="tel"
+                  id="tel"
+                  required
+                  pattern="^(\+38)?0\d{9}$"
+                />
+                <span class="error" aria-live="polite"></span>
                 <svg class="form__icon">
                   <use href="./images/sprite.svg#icon-phone-black"></use>
+                </svg>
+              </div>
+
+              <div class="form__field">
+                <label class="form__label" for="email"> Email </label>
+                <input
+                  type="email"
+                  class="form__input"
+                  name="email"
+                  id="email"
+                  required
+                  minlength="8"
+                />
+                <span class="error" aria-live="polite"></span>
+                <svg class="form__icon">
+                  <use href="./images/sprite.svg#icon-email-black"></use>
                 </svg>
               </div>
 
@@ -162,6 +194,7 @@
                     type="checkbox"
                     name="agreement"
                     id="agreement"
+                    required
                   />
                   <svg class="form__checkbox-icon">
                     <use href="./images/sprite.svg#icon-check"></use>
@@ -170,7 +203,7 @@
                 </label>
               </div>
 
-              <button type="submit" class="form__button">Send</button>
+              <button type="submit" class="form__button" disabled>Send</button>
 
               <button type="button" class="form__close-button" data-modal-close>
                 <svg class="form__close-icon">
@@ -1089,9 +1122,9 @@
 
     <script src="./js/mobile-menu.js" type="module"></script>
     <script src="./js/smooth-scroll.js" type="module"></script>
-    <script src="./js/modal.js" type="module"></script>
     <script src="./js/answers.js" type="module"></script>
     <script src="./js/back-to-top.js" type="module"></script>
+    <script src="./js/validation-form.js" type="module"></script>
 
     <button
       type="button"

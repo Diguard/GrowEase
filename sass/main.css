@@ -1445,10 +1445,6 @@ button[type=submit].is-disabled button[type=submit][disabled] {
   border-radius: 18px;
   padding: 30px 0;
   box-shadow: inset 4px 4px 7px rgba(28, 117, 255, 0.3);
-  transition: transform 0.3s ease;
-}
-.marketing__card:hover {
-  transform: translateY(-5px);
 }
 @media screen and (min-width: 1024px) {
   .marketing__card {
@@ -1895,10 +1891,6 @@ button[type=submit].is-disabled button[type=submit][disabled] {
   border-radius: 15px;
   background-color: #fefeff;
   box-shadow: 20px 20px 36px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-.reviews__card-item:hover {
-  transform: translateY(-5px);
 }
 @media screen and (min-width: 1440px) {
   .reviews__card-item {

@@ -122,12 +122,6 @@
 
   box-shadow: inset 4px 4px 7px rgba(28, 117, 255, 0.3);
 
-  transition: transform 0.3s ease;
-
-  &:hover {
-    transform: translateY(-5px);
-  }
-
   @media screen and (min-width: $tablet) {
     max-width: 231px;
     height: 346px;
@@ -343,7 +337,9 @@
 
     cursor: pointer;
 
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition:
+      background-color 0.3s ease,
+      transform 0.2s ease;
 
     &:hover {
       background-color: darken($primary, 10%);
